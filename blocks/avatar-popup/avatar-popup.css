@@ -1,0 +1,20 @@
+@import url(./__content/avatar-popup__content.css);
+@import url(./__close/avatar-popup__close.css);
+@import url(./__title/avatar-popup__title.css);
+@import url(./__form/avatar-popup__form.css);
+@import url(./__input/avatar-popup__input.css);
+@import url(./__button/avatar-popup__button.css);
+@import url(./_is-opened/popup_is-opened.css);
+
+.avatar-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
