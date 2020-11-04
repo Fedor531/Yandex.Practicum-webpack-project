@@ -1,4 +1,5 @@
-# Yandex.Practicum-webpack-project
+### Учебный проект по webpack в Яндекс.Практикум. <br/>
+
 `Версия 1.0.0`
 
 Иснтрукция
@@ -34,3 +35,7 @@
 ```
     npm run deploy
 ```
+
+
+#### Просмотреть можно по ссылке: 
+https://fedor531.github.io/Yandex-Practicum-webpack-project/
