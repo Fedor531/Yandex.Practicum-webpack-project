@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://image.flaticon.com/icons/png/512/3/3901.png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <title>Mesto</title>
+</head>
+
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="user-info__edit-button">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+    </div>
+    <div class="popup">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-close">
+        <h3 class="popup__title">Новое место</h3>
+        <form novalidate class="popup__form" name="new">
+          <input required minlength="2" maxlength="30" type="text" name="name" id="place-name"
+            class="popup__input popup__input_type_name popup-input" placeholder="Название">
+          <span id="place-name-error" class="error"></span>
+          <input required type="url" name="link" id="link" class="popup__input popup__input_type_link-url"
+            placeholder="Ссылка на картинку">
+          <span id="link-error" class="error"></span>
+          <button class="button popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="edit-popup">
+      <div class="edit-popup__content">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="edit-popup__close popup-close">
+        <h3 class="edit-popup__title">Редактировать профиль</h3>
+        <form novalidate class="edit-popup__form" name="edit">
+          <input required minlength="2" maxlength="30" id="user-name" type="text" name="profile"
+            class="edit-popup__input edit-popup__input_type_profile-name popup-input" placeholder="Имя">
+          <span id="user-name-error" class="error"></span>
+          <input required minlength="2" maxlength="30" id="description" type="text" name="description"
+            class="edit-popup__input edit-popup__input_type_description popup-input" placeholder="О себе">
+          <span id="description-error" class="error"></span>
+          <button class="button edit-popup__button popup__button_is-active">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="image-popup">
+      <div class="image-popup__content">
+        <img class="image-popup__picture" src="" alt="Картинка">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="image-popup__close popup-close">
+      </div>
+    </div>
+
+    <div class="avatar-popup">
+      <div class="avatar-popup__content">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="avatar-popup__close popup-close">
+        <h3 class="avatar-popup__title">Обновить аватар</h3>
+        <form novalidate class="avatar-popup__form" name="avatar">
+          <input required type="url" name="link" id="link" class="popup__input avatar-popup__input"
+            placeholder="Ссылка на аватар">
+          <span id="link-error" class="error"></span>
+          <button class="button avatar-popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+
+</html>
