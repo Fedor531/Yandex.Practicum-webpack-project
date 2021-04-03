@@ -1,10 +1,12 @@
-class Card {
+export default class Card {
   constructor(cardData, openPicturePopup, api) {
     this.cardData = cardData;
     this.openPicturePopup = openPicturePopup;
     this.remove = this.remove.bind(this);
     this.showImage = this.showImage.bind(this);
     this.api = api
+    this.addEventLike = this.addEventLike.bind(this)
+    this.deleteLike = this.deleteLike.bind(this)
   }
 
   create() {
@@ -58,7 +60,7 @@ class Card {
     this.openPicturePopup(this.cardData.link)
   }
 
-  addEventLike = (event) => {
+  addEventLike(event) {
     this.api.addLike(this.cardData._id)
       .then((res) => {
         event.target.classList.add('place-card__like-icon_liked')
@@ -73,7 +75,7 @@ class Card {
       });
   }
 
-  deleteLike = (event) => {
+  deleteLike(event){
     this.api.deleteLike(this.cardData._id)
       .then((res) => {
         event.target.classList.remove('place-card__like-icon_liked')

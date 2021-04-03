@@ -1,0 +1,51 @@
+{
+  "name": "yandex.practicum-webpack-project",
+  "version": "1.0.0",
+  "description": "Учебный проект по Webpack в рамках курса Яндек.Практикум",
+  "scripts": {
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fedor531/Yandex.Practicum-webpack-project.git"
+  },
+  "keywords": [
+    "js",
+    "webpack",
+    "javascript"
+  ],
+  "author": "Fedor <fedor531@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fedor531/Yandex.Practicum-webpack-project/issues"
+  },
+  "homepage": "https://github.com/Fedor531/Yandex.Practicum-webpack-project#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "autoprefixer": "^10.0.1",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^2.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "image-webpack-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^1.2.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^4.0.4",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.4.1"
+  }
+}

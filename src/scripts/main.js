@@ -1,3 +1,12 @@
+import '../pages/index.css'
+import Api from './Api'
+import Card from './Card'
+import CardList from './CardList'
+import FormValidator from './FormValidator'
+import Popup from './Popup'
+import UserInfo from './UserInfo'
+import { errorMessages } from './errorMessages'
+
 (function () {
   const placesList = document.querySelector('.places-list')
 
@@ -33,7 +42,7 @@
   const popupAvatar = new Popup(document.querySelector('.avatar-popup'));
 
   const config = {
-    url: 'https://nomoreparties.co/cohort12',
+    url: `${(NODE_ENV==='development') ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12'}`,
     headers: {
       authorization: '28f11b08-e5e2-4767-8f2f-b8c0fbf2748f',
       'Content-Type': 'application/json'
@@ -163,7 +172,6 @@
   openPlaceFormButton.addEventListener('click', openEditForm)
   openEditFormButton.addEventListener('click', openPlaceForm)
   openAvatarFormButton.addEventListener('click', openAvatarForm)
-
 
   getInitialData()
 
