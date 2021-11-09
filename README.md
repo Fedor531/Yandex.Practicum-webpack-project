@@ -10,9 +10,6 @@
 * CSS (flexbox, grid, BEM) <br/>
 * JavaScript (ES5/ES6) ООП.
 * Webpack 4
-#### Просмотреть можно по ссылке: 
-https://fedor531.github.io/Yandex-Practicum-webpack-project/
-#### Что дальше:
 Переписал проект на React + Redux </br>
 https://github.com/Fedor531/Service-Mesto-React-Redux
 
