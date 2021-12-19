@@ -10,6 +10,7 @@
 * CSS (flexbox, grid, BEM) <br/>
 * JavaScript (ES5/ES6) ООП.
 * Webpack 4
+<br/>
 Переписал проект на React + Redux </br>
 https://github.com/Fedor531/Service-Mesto-React-Redux
 
