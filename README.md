@@ -30,3 +30,6 @@ https://github.com/Fedor531/Service-Mesto-React-Redux
 ```
     npm run build
 ```
+
+<br/>
+https://fedor531.github.io/service-mesto-y.p/
